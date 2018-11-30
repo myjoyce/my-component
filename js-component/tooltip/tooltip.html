@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="tooltip.css">
+</head>
+<body>
+<div class="container" posi="bottom" name="tip" tipContent="this <br> <button>点点</button> is a long long long long long <br>long long long long long tool tip">hover me</div>
+<div class="container" posi="left" name="tip" tipContent ="this is a tool tip2">hover me2</div>
+<div class="container" posi="right" name="tip" tipContent="this <br> is a long long long long long <br>long long long long long tool tip3">hover me3</div>
+<div class="container" posi="top" name="tip" tipContent="this is a tool tip4">hover me4</div>
+</body>
+<script src="tooltip.js"></script>
+<script>
+    var conArr = document.getElementsByName("tip");
+    if(conArr){
+        for(var i = 0;i<conArr.length;i++){
+            var tip = new ToolTip();
+            tip.init(conArr[i]);
+        }
+    }
+</script>
+</html>
