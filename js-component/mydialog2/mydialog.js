@@ -50,24 +50,27 @@ let dialog = (function(){
             let btnClass = index == 0 ? 'confirm-btn':'cancel-btn';
             let temp = `<div class="btn ${btnClass}">${item}</div>`
             btnTemp += temp;
+            console.log(btnTemp)
         })
 
         //最终生成的HTML
         let html = `
             <div class="dialog-wrapper fadeIn">
-                <div class="dialog${skinClass} ${animaArr[currAnimation][0]}">
+                <div class="dialog dialog${skinClass} ${animaArr[currAnimation][0]}">
                     <div class="title">${title}</div>
                     <div class="content">${content}</div>
                     <div class="buttons">${btnTemp}</div>
                 </div>
             </div>
         `;
+
         //添加到Body
         document.body.innerHTML += html;
         //获取所需要的节点
         getNeedElement();
         //绑定事件
         bindEvent(confirm,cancel,shadeClose);
+
         return elem;
     }
 
@@ -94,20 +97,18 @@ let dialog = (function(){
         //confirm按钮的回调
         confirmBtn && confirmBtn.addEventListener('click',e=>{
             hide();
-            console.log(456);
             confirm && confirm();
         })
         //cancel按钮的回调
         cancelBtn && cancelBtn.addEventListener('click',e=>{
             hide();
-            console.log(123);
             cancel && cancel();
         })
         //是否开启点击遮罩关闭
         if(shadeClose){
             elem.addEventListener('click',e=>{
                 let target = e.target||e.srcElement;
-                if(/dialog-wrapper/.test(target.className)){
+                if(/dialog-wrapper/.test(target.className)){                   
                     hide();
                 }
             })
