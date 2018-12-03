@@ -50,7 +50,6 @@ let dialog = (function(){
             let btnClass = index == 0 ? 'confirm-btn':'cancel-btn';
             let temp = `<div class="btn ${btnClass}">${item}</div>`
             btnTemp += temp;
-            console.log(btnTemp)
         })
 
         //最终生成的HTML
