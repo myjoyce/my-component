@@ -163,7 +163,7 @@ pageNation = (function(){
         for(let i=0,len=lis.length;i<len;i++){
             lis[i].onclick = function(){
                 self.options.page = this.innerText;
-                self.rander(self.options.page,self.options.total);
+                self.rander(self.options.page,self.options.size,self.options.total);
             };
         }
         this.options.el.querySelectorAll(".prev-btn")[0].onclick = function(e){
