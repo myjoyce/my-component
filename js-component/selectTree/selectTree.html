@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="selectTree.css">
+</head>
+<body>
+    <div class="tab" data-config='{                    
+    			"triggerType": "click",
+    			"effect": "fade",
+    			"invoke": 2,
+    			"auto": 1000
+    	    }'>
+        <ul class="tab-nav">
+            <li class="active">
+                <a href="javascript:void(0);">新闻</a>
+            </li>
+            <li>
+                <a href="javascript:void(0);">娱乐</a>
+            </li>
+            <li>
+                <a href="javascript:void(0);">电影</a>
+            </li>
+            <li>
+                <a href="javascript:void(0);">科技</a>
+            </li>
+        </ul>
+        <div class="content">
+            <div class="content-item current">
+                <img src="../../img/1.png">
+            </div>
+            <div class="content-item">
+                <img src="../../img/2.png">
+            </div>
+            <div class="content-item">
+                <img src="../../img/3.png">
+            </div>
+            <div class="content-item">
+                <img src="../../img/44.jpg">
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../js/jquery.js"></script>
+<script src="selectTree.js"></script>
+<script>
+    Tab.init($('.tab'));
+</script>
+</html>
